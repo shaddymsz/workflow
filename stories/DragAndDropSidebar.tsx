@@ -3,11 +3,32 @@ import styled from 'styled-components'
 import { FlowChartWithState } from '../src'
 import { Content, Page, Sidebar, SidebarItem } from './components'
 import { chartSimple } from './misc/exampleChartState'
+// import Select from '@material-ui/core/Select';
+// import InputLabel from '@material-ui/core/InputLabel';
+// import FormControl from '@material-ui/core/FormControl';
+// import MenuItem from '@material-ui/core/MenuItem';
 
-const Message = styled.div`
-margin: 10px;
-padding: 10px;
-background: rgba(0,0,0,0.05);
+// const Message = styled.div`
+// margin: 10px;
+// padding: 10px;
+// background: rgba(0,0,0,0.05);
+// `
+const Card = styled.div`
+margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 0px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: #fff;
+  background-clip: border-box;
 `
 
 export const DragAndDropSidebar = () => (
@@ -16,10 +37,27 @@ export const DragAndDropSidebar = () => (
       <FlowChartWithState initialValue={chartSimple} />
     </Content>
     <Sidebar>
-      <Message>
+      {/* <Message>
         Drag and drop these items onto the canvas.
-      </Message>
-      <SidebarItem
+      </Message> */}
+{/*    
+      <FormControl >
+        <InputLabel id="demo-controlled-open-select-label">Age</InputLabel>
+        <Select
+          labelId="demo-controlled-open-select-label"
+          id="demo-controlled-open-select"
+        >
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl> */}
+
+
+      {/* <SidebarItem
         type="top/bottom"
         ports={ {
           port1: {
@@ -147,7 +185,263 @@ export const DragAndDropSidebar = () => (
             type: 'bottom',
           },
         }}
+      /> */}
+     <Card>
+       <Card>
+       <h4>Triggers</h4>
+       </Card>
+       <SidebarItem
+        type="Incoming-SMS"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
       />
+      <SidebarItem
+        type="Contact-Subscribed"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      /> 
+       <SidebarItem
+        type="Contact-Tagged"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <Card>
+        <h4>Conditions</h4>
+      </Card>
+      <SidebarItem
+        type="Message"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <SidebarItem
+        type="Contact"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <SidebarItem
+        type="Time"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <SidebarItem
+        type="Date-Time"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <SidebarItem
+        type="Day"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <SidebarItem
+        type="AB-Split"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <Card>
+        <h4>Actions</h4>
+        </Card>
+        <SidebarItem
+        type="Send-Email"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <SidebarItem
+        type="Send-SMS-Message"
+        ports={ {
+          port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
+            id: 'port1',
+            type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
+          },
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      
+     </Card>
     </Sidebar>
+    <hr></hr>
+    
   </Page>
 )
