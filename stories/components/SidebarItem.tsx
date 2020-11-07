@@ -12,8 +12,6 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
-
-
 const Outer = styled.div`
   padding: 10px 10px;
   display: flex;   
@@ -29,6 +27,7 @@ const mystyle = {
   alignContent: "space-between"
 
 };
+
 
 
 export interface ISidebarItemProps {
@@ -49,12 +48,8 @@ export const SidebarItem = ({ type, ports, properties }: ISidebarItemProps) => {
         event.dataTransfer.setData(REACT_FLOW_CHART, JSON.stringify({ type, ports, properties }))
       } }
     >
-
-        
         <MessageIcon style={mystyle}/>
         Message body is 
-    
-    
     </Outer>
 
   )
@@ -116,23 +111,19 @@ export const SidebarItem = ({ type, ports, properties }: ISidebarItemProps) => {
         event.dataTransfer.setData(REACT_FLOW_CHART, JSON.stringify({ type, ports, properties }))
       } }
     >
-
         <SmsIcon style={mystyle}/> 
         Incoming SMS
     </Outer>
-
   )
  }
  else if (type==="Contact-Subscribed"){
-  return (
-    
+  return ( 
     <Outer
       draggable={true}
       onDragStart={ (event) => {
         event.dataTransfer.setData(REACT_FLOW_CHART, JSON.stringify({ type, ports, properties }))
       } }
     >
-
         <GroupAddIcon style={mystyle}/> 
         Contact Subscribed
     </Outer>
@@ -141,18 +132,14 @@ export const SidebarItem = ({ type, ports, properties }: ISidebarItemProps) => {
  }
  else if (type==="Contact-Tagged"){
   return (
-    
     <Outer
       draggable={true}
       onDragStart={ (event) => {
         event.dataTransfer.setData(REACT_FLOW_CHART, JSON.stringify({ type, ports, properties }))
-      } }
-    >
-
+      } }>
         <LocalOfferIcon style={mystyle}/> 
         Contact Tagged
     </Outer>
-
   )
     }
  else if (type==="Time"){
@@ -162,13 +149,9 @@ export const SidebarItem = ({ type, ports, properties }: ISidebarItemProps) => {
       draggable={true}
       onDragStart={ (event) => {
         event.dataTransfer.setData(REACT_FLOW_CHART, JSON.stringify({ type, ports, properties }))
-      } }
-    >
-       
+      } }>
         <ScheduleIcon style={mystyle}/>
-        Time is
-     
-    
+        Time is    
     </Outer>
 
   )
@@ -182,25 +165,20 @@ export const SidebarItem = ({ type, ports, properties }: ISidebarItemProps) => {
         event.dataTransfer.setData(REACT_FLOW_CHART, JSON.stringify({ type, ports, properties }))
       } }
     >
-     
         <EventIcon style={mystyle}/>
-        Date-time is
-     
-    
+        Date-time is    
     </Outer>
 
   )
  }
  else if (type==="Day"){
   return (
-    
     <Outer
       draggable={true}
       onDragStart={ (event) => {
         event.dataTransfer.setData(REACT_FLOW_CHART, JSON.stringify({ type, ports, properties }))
       } }
     >
-      
         <CalendarTodayIcon style={mystyle}/>
         Day is
       

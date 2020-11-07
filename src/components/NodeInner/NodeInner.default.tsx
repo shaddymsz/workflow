@@ -9,15 +9,18 @@ export interface INodeInnerDefaultProps {
 }
 
 const Outer = styled.div`
-  padding: 40px 30px;
+  padding: 2px 10px;
 `
 
 export const NodeInnerDefault = ({ node,className }: INodeInnerDefaultProps) => {
   return (
     <Outer className={className}>
-      <h3>Message type</h3>
+      <div>
+      <h4>{node.type}</h4>
       <hr></hr>
-      <div>Typeinggggggggggg: {node.type}</div>
+      <p>Type the msg</p>
+      </div>
+      
     </Outer>
   )
 }
