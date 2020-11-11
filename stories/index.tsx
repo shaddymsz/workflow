@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
+import { ReactCustom } from './React.story'
 import { ConfigSnapToGridDemo } from './ConfigSnapToGrid'
 import { ConfigValidateLinkDemo } from './ConfigValidateLink'
 import { CustomCanvasOuterDemo } from './CustomCanvasOuter'
@@ -21,6 +22,9 @@ import { SmartRouting } from './SmartRouting'
 import { StressTestDemo } from './StressTest'
 import { Zoom } from './Zoom'
 
+storiesOf('LEADS', module)
+.add('React component',() => <ReactCustom/> )
+
 storiesOf('State', module)
   .add('Internal React State', InternalReactState)
   .add('External React State', () => <ExternalReactState />)
@@ -32,6 +36,7 @@ storiesOf('Custom Components', module)
   .add('Canvas Outer', CustomCanvasOuterDemo)
   .add('Canvas Link', () => <CustomLinkDemo />)
   .add('Link Colors', () => <LinkColors />)
+  
 
 storiesOf('Stress Testing', module).add('default', StressTestDemo)
 

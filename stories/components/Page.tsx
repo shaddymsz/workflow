@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: #f9f9f9;
   }
 
   *, :after, :before {

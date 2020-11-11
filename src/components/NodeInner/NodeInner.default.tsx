@@ -18,7 +18,7 @@ export const NodeInnerDefault = ({ node,className }: INodeInnerDefaultProps) => 
       <div>
       <h4>{node.type}</h4>
       <hr></hr>
-      <p>Type the msg</p>
+      <textarea></textarea>
       </div>
       
     </Outer>
